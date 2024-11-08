@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Home</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>User Home</h1>
+    <p>I've created a user message!</p>
+</header>
+
+<main>
+
+    <h2>Create Message</h2>
+    <form action="/" method="post">
+        <label for="messageText">Message:</label>
+        <input type="text" name="messageText" id="messageText" placeholder="Enter your message" required>
+        <button type="submit">Save</button>
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+    </form>
+
+    <h2>Messages</h2>
+    <p>Here are your messages...</p>
+    <ul>
+        <li th:each="message : ${messages}" th:text="${message.text}"></li>
+    </ul>
+
+    <h2>Click here to Register</h2>
+    <a href="/register">
+        <button>Register</button>
+    </a>
+    <h2>Login</h2>
+    <form action="/custom-login" method="post">
+        <label for="loginUsername">Username:</label>
+        <input type="text" name="username" id="loginUsername" required>
+
+        <label for="loginPassword">Password:</label>
+        <input type="password" name="password" id="loginPassword" required>
+
+        <button type="submit">Login</button>
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+    </form>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 All Rights Reserved. Sumihiri Mihindukulasooriya</p>
+</footer>
+
+</body>
+</html>

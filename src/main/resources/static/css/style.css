@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+                       @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tilt+Neon&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playwrite DE Grund', sans-serif;
+    background-color: #1c1c1c; /* Dark background for a spooky effect */
+    color: #f2f2f2; /* Light text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    background-color: #2c2c2c;
+    text-align: center;
+    padding: 0.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+header h1 {
+    font-family: 'Rubik Wet Paint', cursive;
+    color: #FF6347; /* Halloween orange */
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px #000000;
+    animation: flicker 3s infinite; /* Flickering effect for spookiness */
+}
+
+header p {
+    font-size: 1.25rem;
+    color: #FFB6C1; /* Soft, eerie pink */
+}
+
+/* Main content styling */
+main {
+    padding: 2rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+main h2 {
+    font-family: 'Rubik Wet Paint', cursive;
+    color: #FF6347;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px #000000;
+}
+
+main p {
+    color: #FFB6C1;
+    font-size: 1.25rem;
+}
+
+/* Form styling */
+form {
+    margin-top: 1.5rem;
+}
+
+label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    width: 60%;
+    border-radius: 5px;
+    border: 2px solid #FF6347;
+    background-color: #2c2c2c;
+    color: #f2f2f2;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    padding: 0.7rem 1.5rem;
+    background-color: #FF6347;
+    color: #1c1c1c;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF4500; /* Darker orange for hover effect */
+}
+
+/* List styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 0.2rem;
+    background-color: #2c2c2c;
+    color: #FFB6C1;
+    font-size: 1rem;
+}
+
+/* Keyframes for flicker animation */
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+    20%, 80% { opacity: 0.3; }
+    40%, 60% { opacity: 0.8; }
+}
